@@ -5,7 +5,11 @@ public class Obra {
 	private String autor;
 	private int anoC;
 	
-	
+	public Obra(String titulo, String autor, int anoC) {
+		this.titulo = titulo;
+		this.autor = autor;
+		this.anoC = anoC;
+	}
 	public String getTitulo() {
 		return titulo;
 	}
@@ -24,6 +28,8 @@ public class Obra {
 	public void setAnoC(int anoC) {
 		this.anoC = anoC;
 	}
+	
+	
 }
 
 
