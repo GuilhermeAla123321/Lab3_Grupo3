@@ -16,6 +16,18 @@ public class GereObra {
 			}
 			obras.add (new Obra(titulo,autor,anoC));
 		}
+	} 
+	
+	public void imprimirDetalhes() {
+		if(obras.isEmpty()) {
+			System.out.print("Nenhuma obra encontrada.");
+		} else {
+			for(Obra o : obras) {
+				System.out.println("Autor :" + o.getAutor() + ", Título :" + o.getTitulo() + ", Ano de criação : " + o.getAnoC());
+			}
+		}
+	}
+}
 	}    
 	
 	public void imprimirTituloAutor(String tela) {
@@ -30,3 +42,4 @@ public class GereObra {
 	}
 	
 }
+
