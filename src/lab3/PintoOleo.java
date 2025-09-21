@@ -12,4 +12,8 @@ public class PintoOleo extends Pintura {
 		this.tipoTela = tipoTela;
 	}
 
+	public String getTipoTela() {
+		return tipoTela;
+	}
+
 }

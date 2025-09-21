@@ -17,4 +17,16 @@ public class GereObra {
 			obras.add (new Obra(titulo,autor,anoC));
 		}
 	}    
+	
+	public void imprimirTituloAutor(String tela) {
+	    for (Obra o : obras) {
+	        if (o instanceof PintoOleo) {
+	            PintoOleo po = (PintoOleo) o; 
+	            if (po.getTipoTela().equalsIgnoreCase(tela)) {
+	                System.out.println("Título: " + po.getTitulo() + " | Autor: " + po.getAutor());
+	            }
+	        }
+	    }
+	}
+	
 }
