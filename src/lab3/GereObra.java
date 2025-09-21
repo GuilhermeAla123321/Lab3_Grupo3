@@ -52,5 +52,50 @@ public class GereObra {
             }
         }
     }
-}
+	public void imprimirDetObraPorTipo() {
+		int totalPintura = 0;
+		int totalOleo = 0;
+		int totalEscultura = 0;
+		
+		System.out.println("Pinturas");
+		for (Obra o : obras) {
+			if (o instanceof PintoOleo) {
+				continue;
+				}
+			else if (o instanceof Pintura) 
+				System.out.println(o);
+			    totalPintura++;
+			    }
+		  System.out.println("Total de Pinturas: " + totalPintura);
+		
+		  System.out.println("PintoOleo");
+		  for (Obra o : obras) {
+			  if(o instanceof PintoOleo){
+				  System.out.print(o);
+				  totalOleo++;
+			  }
+		  System.out.println("Total de pintoOleos: " + totalOleo);
+		  }
+		  
+		  System.out.println("Esculturas");
+		  for (Obra o : obras) {
+			  if (o instanceof Escultura) {
+					System.out.print(o);
+					totalEscultura++;
+					}
+		  System.out.println("Total de esculturas : " + totalEscultura);
+		  }
+		  }
+	}
+
+
+				
+		  
+		  
+		  
+		
+				  
+		
+			
+	
 
