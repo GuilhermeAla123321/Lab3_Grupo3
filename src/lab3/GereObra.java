@@ -1,5 +1,6 @@
 package lab3;
 
-public class GereObra {
+public class GereObra extends Obra {
+	
 
 }
