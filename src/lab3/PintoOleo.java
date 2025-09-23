@@ -16,4 +16,10 @@ public class PintoOleo extends Pintura {
 		return tipoTela;
 	}
 
+	@Override
+	public String toString() {
+		return "PintoOleo [tipoTela=" + tipoTela + "]";
+	}
+	
+	
 }

@@ -8,24 +8,19 @@ public class GereObra {
         obras = new ArrayList<>();
     }
     
-	public void adicionarObras(String titulo, String autor, int anoC) {
-		for ( Obra o : obras) {
-			if( o.getTitulo().equalsIgnoreCase(titulo) && o.getAutor().equalsIgnoreCase(autor)) {
-				System.out.println("Autor e titulo ja existete");
-				return;
-			}
-			obras.add (new Obra(titulo,autor,anoC));
-		}
-	} 
-	public void imprimirDetalhes() {
-		if(obras.isEmpty()) {
-			System.out.print("Nenhuma obra encontrada.");
-		} else {
-			for(Obra o : obras) {
-				System.out.println("Autor :" + o.getAutor() + ", Título :" + o.getTitulo() + ", Ano de criação : " + o.getAnoC());
-			}
-		}
-	}
+    public boolean adicionarObra(Obra novaObra) {
+    	for(Obra o : obras) {
+            if (o.equals(novaObra)) { 
+            	System.out.println("Já existe uma obra com o mesmo título e autor.");
+    	            return false;
+    		}
+    	}
+    	 obras.add(novaObra); 
+    	    System.out.println("Obra registada com sucesso.");
+    	    return true;
+    }
+    
+ 
 	public void pesquisarPorTitulo(String titulo) {
 	    boolean encontrada = false;
 

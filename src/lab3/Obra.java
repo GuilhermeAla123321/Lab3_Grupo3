@@ -28,6 +28,10 @@ public class Obra {
 	public void setAnoC(int anoC) {
 		this.anoC = anoC;
 	}
+	@Override
+	public String toString() {
+		return "Obra [titulo=" + titulo + ", autor=" + autor + ", anoC=" + anoC + "]";
+	}
 	
 	
 }
