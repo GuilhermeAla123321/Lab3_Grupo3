@@ -8,7 +8,7 @@ public class GereObra {
         obras = new ArrayList<>();
     }
     
-    public boolean adicionarObra(Obra novaObra) {
+    public boolean adicionarObras(Obra novaObra) {
     	for(Obra o : obras) {
             if (o.equals(novaObra)) { 
             	System.out.println("Já existe uma obra com o mesmo título e autor.");
