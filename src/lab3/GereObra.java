@@ -8,16 +8,19 @@ public class GereObra {
         obras = new ArrayList<>();
     }
     
-	public void adicionarObras(String titulo, String autor, int anoC) {
-		for ( Obra o : obras) {
-			if( o.getTitulo().equalsIgnoreCase(titulo) && o.getAutor().equalsIgnoreCase(autor)) {
-				System.out.println("Autor e titulo ja existete");
-				return;
-			}
-			obras.add (new Obra(titulo,autor,anoC));
-		}
-	} 
-	public void imprimirDetalhes() {
+    public boolean adicionarObras(Obra novaObra) {
+    	for(Obra o : obras) {
+            if (o.equals(novaObra)) { 
+            	System.out.println("Já existe uma obra com o mesmo título e autor.");
+    	            return false;
+    		}
+    	}
+    	 obras.add(novaObra); 
+    	    System.out.println("Obra registada com sucesso.");
+    	    return true;
+    }
+    
+    public void imprimirDetalhes() {
 		if(obras.isEmpty()) {
 			System.out.print("Nenhuma obra encontrada.");
 		} else {
@@ -25,7 +28,8 @@ public class GereObra {
 				System.out.println("Autor :" + o.getAutor() + ", Título :" + o.getTitulo() + ", Ano de criação : " + o.getAnoC());
 			}
 		}
-	}
+    }
+    
 	public void pesquisarPorTitulo(String titulo) {
 	    boolean encontrada = false;
 
@@ -41,7 +45,6 @@ public class GereObra {
 	        System.out.println("Obra de arte não encontrada.");
 	    }
 	}
-	
 	public void imprimirTituloAutor(String tela) {
         for (Obra o : obras) {
             if (o instanceof PintoOleo) {

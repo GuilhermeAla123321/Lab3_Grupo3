@@ -12,4 +12,16 @@ public class Pintura extends Obra {
     public void setTecnica(String tecnica) {
         this.tecnica = tecnica;
     }
+
+	public String getTecnica() {
+		return tecnica;
+	}
+
+	@Override
+	public String toString() {
+		return "Pintura [tecnica=" + tecnica + "]";
+	}
+
+	
+    
 }
