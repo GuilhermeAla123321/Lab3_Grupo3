@@ -22,22 +22,58 @@ public class Main {
             
             switch(opcao) {
             	case 1:
-            		 System.out.print("Título: ");
-                     String titulo = ler.nextLine();
+                    System.out.print("Título: ");
+                    String titulo = ler.nextLine();
 
-                     System.out.print("Autor: ");
-                     String autor = ler.nextLine();
+                    System.out.print("Autor: ");
+                    String autor = ler.nextLine();
 
-                     System.out.print("Ano de criação: ");
-                     int anoC = ler.nextInt();
+                    System.out.print("Ano de criação: ");
+                    int anoC = ler.nextInt();
+                    ler.nextLine();
+            		
+            		System.out.println("Qual o tipo de obra( pintura ou escultura) :");
+            		String tipo = ler.nextLine();
+            		
+            		 Obra novaObra = null;
+            		
+            		if(tipo.equalsIgnoreCase("pintura")) {
+            			System.out.print("Pintura ou Pintura oleo :");
+            			String tipoPint = ler.nextLine();
+            			
+            			
+            			if(tipoPint.equalsIgnoreCase("pintura")) {
+            				System.out.println("Qual a técnica usada :");
+            				String tecn = ler.nextLine();
+            				novaObra = new Pintura(titulo, autor, anoC, tecn);
+            				gere.adicionarObras(novaObra);
 
-                     gere.adicionarObras(titulo, autor, anoC);
+            			} else {
+            				System.out.print("Qual o tipo de tela usado?- ");
+            				String tipoTela = ler.nextLine();
+            				
+            				novaObra = new Pintura(titulo, autor, anoC, tipoTela);
+            				gere.adicionarObras(novaObra);
+            				
+          	
+            			}
+            		} else {
+            			System.out.println("Qual o material usado na escultura?- ");
+            			String material = ler.nextLine();
+            			
+            			novaObra = new Pintura(titulo, autor, anoC, material);
+        				gere.adicionarObras(novaObra);
+         
+            		}
+                
                      break;
             	case 2:
             		 gere.imprimirDetalhes();
                      break;
+                     
             	case 3:
-            		
+            		System.out.print("Qual o título da obra?- ");
+            		String tituloObra = ler.nextLine(
                      break;
             }
 		} while (opcao != 6); 

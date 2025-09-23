@@ -21,15 +21,15 @@ public class GereObra {
     }
     
     public void imprimirDetalhes() {
-		if(obras.isEmpty()) {
-			System.out.print("Nenhuma obra encontrada.");
-		} else {
-			for(Obra o : obras) {
-				System.out.println("Autor :" + o.getAutor() + ", Título :" + o.getTitulo() + ", Ano de criação : " + o.getAnoC());
-			}
-		}
+        if (obras == null || obras.isEmpty()) {
+            System.out.println("Nenhuma obra encontrada.");
+            return;
+        }
+
+        for (Obra o : obras) {
+            System.out.println(o); 
+        }
     }
-    
 	public void pesquisarPorTitulo(String titulo) {
 	    boolean encontrada = false;
 
@@ -51,7 +51,7 @@ public class GereObra {
                 PintoOleo po = (PintoOleo) o; 
                 if (po.getTipoTela().equalsIgnoreCase(tela)) {
                     System.out.println("Título: " + po.getTitulo() + " | Autor: " + po.getAutor());
-                }
+                } 
             }
         }
     }
