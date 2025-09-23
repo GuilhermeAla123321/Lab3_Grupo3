@@ -20,7 +20,16 @@ public class GereObra {
     	    return true;
     }
     
- 
+    public void imprimirDetalhes() {
+		if(obras.isEmpty()) {
+			System.out.print("Nenhuma obra encontrada.");
+		} else {
+			for(Obra o : obras) {
+				System.out.println("Autor :" + o.getAutor() + ", Título :" + o.getTitulo() + ", Ano de criação : " + o.getAnoC());
+			}
+		}
+    }
+    
 	public void pesquisarPorTitulo(String titulo) {
 	    boolean encontrada = false;
 
@@ -36,7 +45,6 @@ public class GereObra {
 	        System.out.println("Obra de arte não encontrada.");
 	    }
 	}
-	
 	public void imprimirTituloAutor(String tela) {
         for (Obra o : obras) {
             if (o instanceof PintoOleo) {
