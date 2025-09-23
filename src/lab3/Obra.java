@@ -4,6 +4,7 @@ public class Obra {
 	private String titulo;
 	private String autor;
 	private int anoC;
+	private String tipoO;
 	
 	public Obra(String titulo, String autor, int anoC) {
 		this.titulo = titulo;
@@ -31,6 +32,10 @@ public class Obra {
 	@Override
 	public String toString() {
 		return "Obra [titulo=" + titulo + ", autor=" + autor + ", anoC=" + anoC + "]";
+	}
+	
+	public String getTipoO() {
+		return tipoO;
 	}
 	
 	
